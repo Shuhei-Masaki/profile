@@ -6,56 +6,82 @@
     <link rel="icon" type="img/favicon" href="img/favicon.ico">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
   <body>
     <!-- header -->
     <header id="header">
-      <h1><a href="index.html">Profile</a></h1>
+      <h1><a href="index.html">SHUHEI MASAKI</a></h1>
       <nav>
         <ul>
-          <li><a href="#profile">Career</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#skill">Skill</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <!-- ハンバーガ -->
+      <div class="nav_btn">
+        <span class="nav_top"></span>
+        <span class="nav_mid"></span>
+        <span class="nav_bottom"></span>
+      </div>
+      <div class="mask"></div>
     </header>
 
     <!-- container -->
-    <div class="container wrapper">
-      <article id="profile">
-        <img src="img/profile.jpeg" alt="profile">
-        <div class="profile_title">
-          <h3>正木脩平 (まさきしゅうへい)</h3>
-        </div>
-        <div class="profile_text">
-          <p>法政大学経営学部4年</p>
-          <p>アプリ開発やウェブデザインを行っています。
-            2022年に法政大学を卒業し、IT業界のエンジニアとして働く予定です。
-          </p>
-          <p>
-            読書とピアノを弾くことが好きです！
-          </p>
-          <p>
-            iOS/Androidアプリ開発経験8ヶ月でアプリのリリース経験があります。
-          </p>
-        </div>
-      </article>
-      <!-- career -->
-      <aside id="career">
-        <div class="content_title">
-          <h2>Career</h2>
-        </div>
-        <ul>
-          <li>2020/11/4  SwiftUIでプログラミングを学ぶ</li>
-          <li>2021/2/2  iOSアプリ「学生アンケートコミュニティ」をリリース</li>
-          <li>2021/2/9　 Flutterを学び始める</li>
-          <li>2021/5/2　 iOS版アプリ「誘惑家計簿」をリリース</li>
-          <li>2021/5/12  Android版アプリ「誘惑家計簿」をリリース</li>
-          <li>2021/5/25  HTML/CSSを学び始める</li>
-        </ul>
-      </aside>
-    </div>
+    <section id="about" class="wrapper">
+      <div class="content_title">
+        <h2>About</h2>
+      </div>
+      <div class="container">
+        <article class="profile">
+          <img src="img/profile.jpeg" alt="profile">
+          <div class="profile_title">
+            <h3>正木脩平 (まさきしゅうへい)</h3>
+          </div>
+          <div class="profile_text">
+            <p>法政大学経営学部4年 2022年卒業見込み<br>
+            アプリ開発やWeb制作を行っています。<br>
+            IT業界のエンジニアとして働く予定です。</p>
+            iOS/Androidアプリのリリース経験があります。<br>
+            趣味は読書とピアノを弾くこと
+            </p>
+          </div>
+        </article>
+        <!-- career -->
+        <aside class="career">
+            <h2>経歴</h2>
+          <ul>
+            <li>
+              <p>2020/11/4</p>
+              <p>SwiftUIでプログラミングを学ぶ</p>
+            </li>
+            <li>
+              <p>2021/2/2</p>
+              <p>iOSアプリ「学生アンケートコミュニティ」をリリース</p>
+            </li>
+            <li>
+              <p>2021/2/9</p>
+              <p>Flutterを学び始める</p>
+            </li>
+            <li>
+              <p>2021/5/2</p>
+              <p>iOS版アプリ「誘惑家計簿」をリリース</p>
+            </li>
+            <li>
+              <p>2021/5/12</p>
+              <p>Android版アプリ「誘惑家計簿」をリリース</p>
+            </li>
+            <li>
+              <p>2021/5/25</p>
+              <p>Web制作を学び始める</p>
+                </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
 
     <!-- skill -->
     <section id="skill" class="wrapper">
@@ -63,26 +89,29 @@
         <h2>Skill</h2>
       </div>
       <h4>プログラミング言語と開発ツール</h4>
+      <div class="my_tool">
         <ul>
           <li><img src="img/Swiftui.png" alt="swift"></li>            <li><img src="img/flutter.png" alt="flutter"></li>
           <li><img src="img/html.png" alt="html"></li>
           <li><img src="img/css.jpeg" alt="css"></li>
+          <li><img src="img/javascript.png" alt="js"></li>
           <li><img src="img/xcode.png" alt="xcode"></li>
           <li><img src="img/androidstudio.png" alt="sndroid"></li>
           <li><img src="img/atom.svg" alt="sndroid"></li>
           <li><img src="img/github.png" alt="git"></li>
         </ul>
+      </div>
         <h4>リリースしたアプリ</h4>
         <div class="my_app">
           <ul>
             <img src="img/icon1.jpeg" alt="icon">
             <p>学生アンケートコミュニティ</p>
-            <p>言語；SwiftUI<br>ツール：Xcode</p>
+            <p>開発言語；SwiftUI<br>ツール：Xcode</p>
           </ul>
           <ul>
             <img src="img/icon2.png" alt="icon">
             <p>誘惑家計簿</p>
-            <p>言語；Flutter<br>ツール：AndroidStudio</p>
+            <p>開発言語；Flutter<br>ツール：AndroidStudio</p>
           </ul>
         </div>
     </section>
@@ -92,17 +121,20 @@
       <div class="content_title">
         <h2>Contact</h2>
       </div>
-      <form class="form" method="post">
+      <form class="form"　action="" method="post">
         <div>
           <label for="name">Name</label>
+          <p class="name_err">*名前を入力してください</p>
           <input type="text" id="name" name="your_text">
         </div>
         <div>
           <label for="email">E-mail</label>
+          <p class="email_err">*メールアドレスを入力してください</p>
           <input type="email" id="email" name="your_email">
         </div>
         <div>
           <label for="message">Massege</label>
+          <p class="message_err">*メッセージを入力してください</p>
           <textarea name="name" id="message" rows="8" cols="80"></textarea>
         </div>
         <div class="button"><input type="submit" value="送信"></div>
@@ -112,10 +144,12 @@
     <!-- footer -->
     <footer id="footer" class="wrapper">
       <div class="img">
-        <a class="insta" href="#"><img src="img/instagram.png" alt="insta"></a>
-        <a class="twitter" href="#"><img src="img/twitter.png" alt="twitter"></a>
+        <a class="insta" href="https://www.instagram.com/instagram/?hl=ja"><img src="img/instagram.png" alt="insta"></a>
+        <a class="twitter" href="https://twitter.com/TwitterJP?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="img/twitter.png" alt="twitter"></a>
       </div>
-      <p><small>&copy Profile</small></p>
+      <p><small>&copy 2021 SHUHEI MASAKI</small></p>
     </footer>
+    <script src="script.js"></script>
+    </script>
   </body>
 </html>
