@@ -3,7 +3,7 @@ $(function() {
 
   // windowのサイズ変更された時の処理
   $(window).resize(function() {
-    if ($(window).width() >= 800) {
+    if ($(window).width() >= 700) {
     $('nav').show();
     $('.mask').hide();
   } else {
