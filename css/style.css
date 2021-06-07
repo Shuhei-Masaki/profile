@@ -191,6 +191,9 @@ a {
   #header {
     justify-content: center;
   }
+  #header h1 {
+    font-size: 1.2rem;
+  }
   #header nav {
     padding-top: 80px;
     position: absolute;
@@ -213,8 +216,8 @@ a {
   .nav_btn {
     display: block;
     position: absolute;
-    top: 25px;
-    left: 45px;
+    top: 20px;
+    left: 40px;
     /* この横と縦はpointerの範囲につながる */
     width: 30px;
     height: 30px;
@@ -261,7 +264,7 @@ a {
   }
    #skill .my_tool ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+    grid-template-columns: 1fr 1fr 1fr
   }
   #skill .my_tool li {
   padding-bottom: 10px;
