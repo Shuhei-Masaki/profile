@@ -186,7 +186,7 @@ a {
 
 
 /* レスポンシブ対応 */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
   /* ハンバーガーを作ってみる */
   #header {
     justify-content: center;
@@ -262,11 +262,24 @@ a {
   .career {
     padding-left: 0px;
   }
+  #skill img {
+    margin-right: 0px;
+  }
+  #skill {
+    justify-content: center;
+    text-align: center;
+  }
+  #skill ul {
+    margin: 40px auto;
+  }
    #skill .my_tool ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr
+    grid-template-columns: 1fr 1fr 1fr;
   }
   #skill .my_tool li {
   padding-bottom: 10px;
+ }
+ #skill .my_app ul{
+   margin-right: auto;
  }
 }
