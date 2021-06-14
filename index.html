@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Profile</title>
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
@@ -90,9 +90,9 @@
         <h2>Skill</h2>
       </div>
       <h4>プログラミング言語と開発ツール</h4>
-      <div class="my_tool">
-        <ul>
-          <li><img src="img/swiftui.png" alt="swift"></li>            <li><img src="img/flutter.png" alt="flutter"></li>
+        <ul class="slick">
+          <li><img src="img/swiftui.png" alt="swiftui"></li>
+          <li><img src="img/flutter.png" alt="flutter"></li>
           <li><img src="img/html.png" alt="html"></li>
           <li><img src="img/css.jpeg" alt="css"></li>
           <li><img src="img/javascript.png" alt="js"></li>
@@ -101,20 +101,21 @@
           <li><img src="img/atom.svg" alt="sndroid"></li>
           <li><img src="img/github.png" alt="git"></li>
         </ul>
-      </div>
+      <div class="app_title">
         <h4>リリースしたアプリ</h4>
-        <div class="my_app">
-          <ul>
-            <img src="img/icon1.jpeg" alt="icon">
-            <p>学生アンケートコミュニティ</p>
-            <p>開発言語；SwiftUI<br>ツール：Xcode</p>
-          </ul>
-          <ul>
-            <img src="img/icon2.png" alt="icon">
-            <p>誘惑家計簿</p>
-            <p>開発言語；Flutter<br>ツール：AndroidStudio</p>
-          </ul>
-        </div>
+      </div>
+      <div class="my_app">
+        <ul>
+        　<img src="img/icon1.jpeg" alt="icon">
+　        <p>学生アンケートコミュニティ</p>
+          <p>開発言語；SwiftUI<br>ツール：Xcode</p>
+        </ul>
+        <ul>
+          <img src="img/icon2.png" alt="icon">
+          <p>誘惑家計簿</p>
+          <p>開発言語；Flutter<br>ツール：AndroidStudio</p>
+        </ul>
+      </div>
     </section>
 
     <!-- contact   -->
@@ -151,7 +152,10 @@
       </div>
       <p><small>&copy 2021 SHUHEI MASAKI</small></p>
     </footer>
-    <script src="script.js"></script>
-    </script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
