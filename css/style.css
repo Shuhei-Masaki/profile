@@ -17,7 +17,6 @@ a {
   text-decoration: none;
 }
 
-
 .wrapper {
   max-width: 1000px;
   width: 100%;
@@ -113,20 +112,42 @@ a {
 }
 
 /* skill  */
-#skill ul {
-  margin: 40px 0;
-  display: flex;
+.slick{
+  margin: 40px auto;
+  width: 100%;
 }
-#skill img {
-  margin-right: 30px;
-  width: 70px;
+
+.slick img{
+  margin: 0 auto;
+  width: 100px;
+}
+.slick-dots li button::before {
+  margin: 20px auto;
+}
+/*矢印の設定*/
+.slick-prev:before,
+.slick-next:before {
+  background-color: #432;
+    color: red;
+}
+.slick-next{
+  right:0!important;
+}
+.slick-prev{
+  left:0!important;
+}
+.slick-arrow{
+  z-index:2!important;
+}
+#skill .app_title {
+  margin-top: 100px;
 }
 #skill .my_app {
   text-align: center;
   display: flex;
 }
 #skill .my_app img {
-  margin: 0 auto;
+  margin: 40px auto;
   padding-bottom: 10px;
   width: 90px;
 }
@@ -262,23 +283,13 @@ a {
   .career {
     padding-left: 0px;
   }
-  #skill img {
-    margin-right: 0px;
-  }
   #skill {
     justify-content: center;
     text-align: center;
   }
   #skill ul {
-    margin: 40px auto;
+    margin: 40px auto 0px auto;
   }
-   #skill .my_tool ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  #skill .my_tool li {
-  padding-bottom: 10px;
- }
  #skill .my_app ul{
    margin-right: auto;
  }
