@@ -23,6 +23,16 @@ $(function() {
 
   });
 
+  //スライダー
+  $('.slick').slick({
+    autoplay:true,
+    autoplaySpeed:1500,
+    dots:true,
+    slidesToShow:4,
+    slidesToScroll:1,
+});
+
+
 
   // ハンバーガ機能
   $('.nav_btn').click(function() {
