@@ -20,30 +20,25 @@ $(function() {
       'scrollTop': position - 80
     }, 300);
     $('#header').removeClass('open');
-
   });
 
   //スライダー
   $('.slick').slick({
     autoplay:true,
-    autoplaySpeed:1500,
+    autoplaySpeed:5000,
+    slidesToShow:2,
+    centerMode:true,
     dots:true,
-    slidesToShow:4,
+    arrows:false,
     slidesToScroll:1,
     responsive: [
     {
       breakpoint: 700,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 1,
       }
-    },
-
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-});
-
+    },]
+  });
 
 
   // ハンバーガ機能
