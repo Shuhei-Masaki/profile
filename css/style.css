@@ -4,6 +4,7 @@ html {
   font-size: 100%;
 }
 body {
+  font-family: 'Nunito', sans-serif;
   font-size: 1rem;
   color: #333;
 }
@@ -12,6 +13,10 @@ img {
 }
 li {
   list-style: none;
+}
+h2 {
+  display: inline-block;
+  border-bottom: 2px solid #196989;
 }
 a {
   text-decoration: none;
@@ -23,12 +28,11 @@ a {
   padding: 40px 4%;
   margin: 0 auto;
 }
-.content_title {
+.section-title {
   font-size: 1.5rem;
   margin-bottom: 80px;
   text-align: center;
 }
-
 
 /* header */
 #header {
@@ -59,11 +63,24 @@ a {
   display: flex;
 }
 #header li {
-  padding-left: 20px;
+  padding-left: 24px;
   color: #fff;
 }
 
-
+/* main */
+.main-img {
+  background-image: url(../img/main1.jpg);
+  min-height: 100vh;
+  background-size: cover;
+}
+.main-title h3{
+  position: relative;
+  font-weight: 500;
+  top: 250px;
+  text-shadow: 4px 2px 3px #808080;
+  font-size: 2.4rem;
+  text-align: center;
+}
 
 /* about */
 #about {
@@ -74,19 +91,17 @@ a {
   display: flex;
   justify-content: center;
 }
-.profile {
-  justify-content: center;
-}
 /* profile */
 .profile img{
   border-radius: 50%;
   height: 280px;
   width: 280px;
 }
-.profile .profile_title {
+.profile .profile-title {
   padding: 20px 0px;
 }
-.profile .profile_text {
+.profile .profile-text {
+  display: inline-block;
   margin: 0 auto;
   text-align: left;
 }
@@ -96,7 +111,8 @@ a {
   padding-left: 80px;
   text-align: center;
 }
-.career h2 {
+.career h3 {
+  font-size: 1.4rem;
   padding-bottom: 40px;
 }
 .career ul {
@@ -110,55 +126,57 @@ a {
   border-bottom: 1px solid #dcdbdb;
   padding: 18px;
 }
-
-/* skill  */
-.slick{
-  margin: 40px auto;
-  width: 100%;
+/* service */
+#service {
+  background-color: #edf6fd;
 }
-
-.slick img{
-  margin: 0 auto;
-  width: 100px;
-}
-.slick-dots li button::before {
-  margin: 20px auto;
-}
-/*矢印の設定*/
-.slick-prev:before,
-.slick-next:before {
-  background-color: #432;
-    color: red;
-}
-.slick-next{
-  right:0!important;
-}
-.slick-prev{
-  left:0!important;
-}
-.slick-arrow{
-  z-index:2!important;
-}
-#skill .app_title {
-  margin-top: 100px;
-}
-#skill .my_app {
-  text-align: center;
+#service ul {
   display: flex;
 }
-#skill .my_app img {
-  margin: 40px auto;
-  padding-bottom: 10px;
-  width: 90px;
+#service li {
+  background-color: #fff;
+  margin: 0 18px;
+  box-shadow: 0 8px 12px 0 rgb(0,0,0,0.5)
 }
-#skill .my_app ul{
-  justify-content: center;
-  margin-right: 40px;
-  flex-direction: column;
-  font-size: 0.675rem;
+#service h4 {
+  text-align: center;
+  margin: 6px 10px;
+}
+#service p {
+  font-size: 0.9rem;
+  padding: 10px 14px;
+}
+
+/* work */
+#work .slick{
+  margin: 40px auto;
+}
+#work h6 {
+  padding-top: 20px;
+}
+.img-position {
+  filter: brightness(30%);
+  padding: 20px;
+  margin: 0 10px;
+}
+.slick li img:hover {
+  opacity: 0.7;
+}
+.text-position {
+  position: relative;
+  bottom: 230px;
+  color: #fff;
+  text-align: center;
+  z-index: 10;
 }
 
 /* contact */
+.container-footer {
+  background: #edf6fd;
+}
+#contact h2 {
+  text-align: center;
+}
 #contact div {
   margin: 30px 0;
 }
@@ -220,7 +238,6 @@ a {
     position: absolute;
     top: 0px;
     bottom: -1000px;
-    left: 0;
     background-color: #000;
     z-index: 20;
     display: none;
@@ -283,14 +300,13 @@ a {
   .career {
     padding-left: 0px;
   }
-  #skill {
-    justify-content: center;
-    text-align: center;
+  #service ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
-  #skill ul {
-    margin: 40px auto 0px auto;
+  #service ul {
   }
- #skill .my_app ul{
-   margin-right: auto;
+  #service li{
+    margin: 0px 20px 40px 20px;
  }
 }
