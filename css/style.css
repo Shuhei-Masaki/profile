@@ -1,211 +1,341 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <!-- スマホ対応 -->
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Profile</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  </head>
+@charset "UTF-8";
 
-  <body>
-    <!-- header -->
-    <header id="header">
-      <h1><a href="index.html">SHUHEI MASAKI</a></h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#service">Service</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <!-- ハンバーガ -->
-      <div class="nav_btn">
-        <span class="nav_top"></span>
-        <span class="nav_mid"></span>
-        <span class="nav_bottom"></span>
-      </div>
-      <div class="mask"></div>
-    </header>
+html {
+  font-size: 100%;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  color: #333;
+}
+img {
+  width: 100%;
+}
+li {
+  list-style: none;
+}
+h2 {
+  display: inline-block;
+  border-bottom: 2px solid #196989;
+}
+a {
+  text-decoration: none;
+}
 
-    <main class="main-img">
-      <div class="main-title">
-        <h3>お客様との出会いを大切に</h3>
-      </div>
-    </main>
+.wrapper {
+  max-width: 1000px;
+  width: 100%;
+  padding: 40px 4%;
+  margin: 0 auto;
+}
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 80px;
+  text-align: center;
+}
 
-    <!-- container -->
-    <section id="about" class="wrapper">
-      <div class="section-title">
-        <h2>About</h2>
-      </div>
-      <div class="container">
-        <article class="profile">
-          <img src="img/profile.jpeg" alt="profile">
-          <div class="profile-title">
-            <h3>正木脩平 (まさきしゅうへい)</h3>
-          </div>
-          <div class="profile-text">
-            <p>法政大学経営学部4年 2022年卒業見込み<br>
-            アプリ開発やWeb制作を行っています。<br>
-            IT業界のエンジニアとして働く予定です。</p>
-            iOS/Androidアプリのリリース経験があります。<br>
-            趣味は読書とピアノを弾くこと
-            </p>
-          </div>
-        </article>
-        <!-- career -->
-        <aside class="career">
-            <h3>経歴</h3>
-          <ul>
-            <li>
-              <p>2020/11/4</p>
-              <p>SwiftUIでプログラミングを学ぶ</p>
-            </li>
-            <li>
-              <p>2021/2/2</p>
-              <p>iOSアプリ「学生アンケートコミュニティ」をリリース</p>
-            </li>
-            <li>
-              <p>2021/2/9</p>
-              <p>Flutterを学び始める</p>
-            </li>
-            <li>
-              <p>2021/5/2</p>
-              <p>iOS版アプリ「誘惑家計簿」をリリース</p>
-            </li>
-            <li>
-              <p>2021/5/12</p>
-              <p>Android版アプリ「誘惑家計簿」をリリース</p>
-            </li>
-            <li>
-              <p>2021/5/25</p>
-              <p>Web制作を学び始める</p>
-                </li>
-          </ul>
-        </aside>
-      </div>
-    </section>
+/* header */
+#header {
+  padding: 20px 0;
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  z-index: 10;
+  justify-content: space-between;
+}
+#header a {
+  color: #fff;
+}
+#header li a:hover {
+  color: #0bd;
+}
+#header h1 {
+  margin: 0 auto;
+  padding-left: 4%;
+}
+#header nav {
+  margin: 0 auto;
+  padding-right: 4%;
+}
+#header ul {
+  display: flex;
+}
+#header li {
+  padding-left: 24px;
+  color: #fff;
+}
+
+/* main */
+.main-img {
+  background-image: url(../img/main1.jpg);
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+.main-title h3{
+  position: relative;
+  font-weight: 500;
+  top: 250px;
+  text-shadow: 4px 2px 3px #808080;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+/* about */
+#about {
+  padding-top: 120px;
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+/* profile */
+.profile img{
+  border-radius: 50%;
+  height: 280px;
+  width: 280px;
+}
+.profile .profile-title {
+  padding: 20px 0px;
+}
+.profile .profile-text {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: left;
+}
+/* creer */
+.career {
+  font-size: 0.925rem;
+  padding-left: 80px;
+  text-align: center;
+}
+.career h3 {
+  font-size: 1.4rem;
+  padding-bottom: 40px;
+}
+.career ul {
+  max-width: 400px;
+  border-top: 1px solid #dcdbdb;
+  /* inline-blockで文字に合わせて線を引く */
+  display: inline-block;
+}
+.career li {
+  text-align: left;
+  border-bottom: 1px solid #dcdbdb;
+  padding: 18px;
+}
+/* service */
+#service {
+  background-color: #edf6fd;
+}
+#service ul {
+  display: flex;
+}
+#service li {
+  background-color: #fff;
+  margin: 0 18px;
+  box-shadow: 0 8px 12px 0 rgb(0,0,0,0.5)
+}
+#service h4 {
+  text-align: center;
+  margin: 6px 10px;
+}
+#service p {
+  font-size: 0.9rem;
+  padding: 10px 14px;
+}
+
+/* work */
+#work .slick{
+  margin: 60px auto;
+}
+#work h6 {
+  padding-top: 20px;
+}
+.img-position {
+  filter: brightness(30%);
+  padding: 0 20px;
+}
+.slick li:hover {
+  opacity: 0.7;
+}
+.position{
+  position: relative;
+}
+.text-postion {
+  display: inline-block;
+}
+.text-position {
+  top: 40%;left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  position: absolute;
+  color: #fff;
+  z-index: 10;
+}
+.text-position h5 {
+  text-align: center;
+  font-size: 1rem;
+  padding-bottom: 20px;
+}
+
+/* contact */
+.container-footer {
+  background: #edf6fd;
+}
+#contact h2 {
+  text-align: center;
+}
+#contact div {
+  margin: 30px 0;
+}
+#contact input, textarea {
+  width: 100%;
+  border: 1px solid #c8c8c8;
+  /* 枠内の余白 */
+  padding: 10px;
+  margin-top: 12px;
+}
+#contact .button {
+  text-align: center;
+}
+#contact .button input {
+  width: 200px;
+  color: #fff;
+  background-color: #24292e;
+  padding: 15px 0;
+  border: solid 1px #24292e;
+}
+#contact .button input:hover {
+  border: 1px solid #24292e;
+  color: #fff;
+  opacity: 0.7;
+}
+.name_err, .email_err, .message_err {
+  color: red;
+  display: none;
+}
 
 
-    <!-- service -->
-    <section id="service">
-      <div class="wrapper">
-        <div class="section-title">
-          <h2>Service</h2>
-        </div>
-        <ul>
-          <li>
-            <img src="img/service1.jpg" alt="">
-            <h4>HP/LP制作</h4>
-            <p>レスポンシブ対応はもちろん、集客を意識したデザインを心がけます。</p>
-          </li>
-          <li>
-            <img src="img/practice.jpg" alt="">
-            <h4>WordPress化</h4>
-            <p>レスポンシブ対応はもちろん、見やすいデザインを心がけて制作します。</p>
-          </li>
-          <li>
-            <img src="img/service3.jpg" alt="">
-            <h4>モバイルアプリ開発</h4>
-            <p>Flutterを用いたアプリ開発を行います。
-              過去に2つのアプリをリリースした経験があり、
-              firebaseを得意としております。
-            </p>
-          </li>
-        </ul>
-      </div>
-    </section>
+/* footer */
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#footer .img {
+  width: 150px;
+  display: flex;
+}
+#footer a {
+  padding-right: 40px;
+}
 
 
-    <!-- Work -->
-    <section id="work" class="wrapper">
-      <div class="section-title">
-        <h2>Work</h2>
-        <h6>ポートフォリオ紹介になります</h6>
-      </div>
-      <ul class="slick">
-        <li class="position"><a href="https://shuhei-masaki.github.io/portfolio_sneaker/">
-          <div class="text-position">
-            <h5>デモサイト1<br>(HTML&CSS/jQuery)</h5>
-          </div>
-          <div class="img-position">
-            <img src="img/portfolio3.png" alt="">
-          </div>
-        </a></li>
-        <li class="position"><a href="https://shuhei-masaki.github.io/portfolio_sneaker/">
-          <div class="text-position">
-            <h5>デモサイト2<br>(HTML&CSS/jQuery)</h5>
-          </div>
-          <div class="img-position">
-            <img src="img/portfolio3.png" alt="">
-          </div>
-        </a></li>
-        <li class="position"><a href="https://shuhei-masaki.github.io/portfolio_sneaker/">
-          <div class="text-position">
-            <h5>デモサイト3<br>(HTML&CSS/jQuery)</h5>
-          </div>
-          <div class="img-position">
-            <img src="img/portfolio3.png" alt="">
-          </div>
-        </a></li>
-        <li class="position"><a href="https://shuhei-masaki.github.io/portfolio_sneaker/">
-          <div class="text-position">
-            <h5>デモサイト4<br>(HTML&CSS/jQuery)</h5>
-          </div>
-          <div class="img-position">
-            <img src="img/portfolio3.png" alt="">
-          </div>
-        </a></li>
-      </ul>
-    </section>
 
+/* レスポンシブ対応 */
+@media screen and (max-width: 700px) {
+  /* ハンバーガーを作ってみる */
+  #header {
+    justify-content: center;
+  }
+  #header h1 {
+    font-size: 1.2rem;
+  }
+  #header nav {
+    padding-top: 80px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: -1000px;
+    background-color: #000;
+    z-index: 20;
+    display: none;
+  }
+  #header ul {
+    display: inline-block;
+    flex-direction: column;
+    border-top: 1px solid #fff;
+  }
+  #header li {
+    padding: 20px 80px 20px 20px;
+    border-bottom: 1px solid #fff;
+  }
+  .nav_btn {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    /* この横と縦はpointerの範囲につながる */
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .nav_btn span {
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    width: 30px;
+    height: 2px;
+  }
+  .nav_top {
+    top: 4px;
+  }
+  .nav_mid {
+    top: 14px;
+  }
+  .nav_bottom {
+    top: 24px;
+  }
+  .mask {
+    position: absolute;
+    top: 0;
+    bottom:-1000px;
+    right: 0;
+    left: 0;
+    z-index: 15;
+    background-color: #000;
+    opacity: 0.5;
+    display: none;
+    }
+    /* main */
+    .main-img {
+      min-height: 80vh;
+    }
+    .main-title h3 {
+      font-size: 2rem;
+      top: 200px;
+    }
 
-    <!-- contact   -->
-    <div class="container-footer">
-      <section id="contact" class="wrapper">
-        <div class="section-title">
-          <h2>Contact</h2>
-        </div>
-        </form>
-        <form class="form"　action="mailto:nico0716-shu14@outlook.jp" method="post">
-          <div>
-            <label for="name">Name</label>
-            <p class="name_err">*名前を入力してください</p>
-            <input type="text" id="name" name="your_text">
-          </div>
-          <div>
-            <label for="email">E-mail</label>
-            <p class="email_err">*メールアドレスを入力してください</p>
-            <input type="email" id="email" name="your_email">
-          </div>
-          <div>
-            <label for="message">Massege</label>
-            <p class="message_err">*メッセージを入力してください</p>
-            <textarea name="name" id="message" rows="8" cols="80"></textarea>
-          </div>
-          <div class="button"><input type="submit" value="送信"></div>
-        </form>
-      </section>
+    /* work */
+    .text-position p {
+      top: 120px;
+    }
 
-      <!-- footer -->
-      <footer id="footer" class="wrapper">
-        <div class="img">
-          <a class="insta" href="https://www.instagram.com/instagram/?hl=ja"><img src="img/instagram.png" alt="insta"></a>
-          <a class="twitter" href="https://twitter.com/TwitterJP?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="img/twitter.png" alt="twitter"></a>
-        </div>
-        <p><small>&copy 2021 SHUHEI MASAKI</small></p>
-      </footer>
-    </div><!--container--->
-
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-  </body>
-</html>
+    /* about */
+  .container{
+    flex-direction: column;
+  }
+  .profile_text {
+    width: 300px;
+    padding-bottom: 40px;
+  }
+  .career {
+    padding-left: 0px;
+  }
+  /* service */
+  #service ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #service ul {
+  }
+  #service li{
+    margin: 0px 20px 40px 20px;
+ }
+}
