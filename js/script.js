@@ -28,7 +28,7 @@ $(function() {
     autoplaySpeed:5000,
     slidesToShow:2,
     centerMode:true,
-    dots:true,
+    dots:false,
     arrows:false,
     slidesToScroll:1,
     responsive: [
