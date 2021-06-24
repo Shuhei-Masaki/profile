@@ -38,15 +38,15 @@ a {
 #header {
   padding: 20px 0;
   width: 100%;
-  background-color: #333;
+  /* background-color: #333; */
   display: flex;
-  position: fixed;
+  position: absolute;
   align-items: center;
   z-index: 10;
   justify-content: space-between;
 }
 #header a {
-  color: #fff;
+  color: #000;
 }
 #header li a:hover {
   color: #0bd;
@@ -247,11 +247,12 @@ a {
     font-size: 1.2rem;
   }
   #header nav {
+    position: fixed;
     padding-top: 80px;
-    position: absolute;
     top: 0px;
     left: 0px;
     bottom: -1000px;
+    /* background-color: #000; */
     background-color: #000;
     z-index: 20;
     display: none;
@@ -265,9 +266,12 @@ a {
     padding: 20px 80px 20px 20px;
     border-bottom: 1px solid #fff;
   }
+  #header li a{
+    color: #fff;
+  }
   .nav_btn {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 20px;
     left: 40px;
     /* この横と縦はpointerの範囲につながる */
@@ -279,7 +283,7 @@ a {
   .nav_btn span {
     display: block;
     position: absolute;
-    background-color: #fff;
+    background-color: #000;
     width: 30px;
     height: 2px;
   }
@@ -293,7 +297,7 @@ a {
     top: 24px;
   }
   .mask {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom:-1000px;
     right: 0;
